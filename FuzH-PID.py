@@ -149,3 +149,53 @@ class FUZZYPIDOptimizer(Optimizer):
 
 
         return loss
+
+
+    def calculate_alpha(x, E, tau_1):
+        """
+        Calculate the contraction-expansion factor alpha for an input value x,
+        boundary E, and hereditary coefficient tau_1.
+    
+        :param x: The input value for which to calculate alpha.
+        :param E: The boundary value E.
+        :param tau_1: The potentially hereditary coefficient tau_1.
+        :return: The calculated alpha value.
+        """
+        return np.abs(x) / E ** tau_1
+
+
+    def calculate_beta(x, y, E, E_C, tau_1, tau_2, method='geometric'):
+        """
+        Calculate the contraction-expansion factor beta for input values x, y,
+        boundaries E, E_C, and hereditary coefficients tau_1, tau_2.
+    
+        :param x: The input value x.
+        :param y: The input value y.
+        :param E: The boundary value E for x.
+        :param E_C: The boundary value E_C for y.
+        :param tau_1: The potentially hereditary coefficient tau_1 for x.
+        :param tau_2: The potentially hereditary coefficient tau_2 for y.
+        :param method: The method for calculating beta ('geometric' or 'arithmetic').
+        :return: The calculated beta value.
+        """
+        if method == 'geometric':
+            return (np.abs(x) / E) ** tau_1 * (np.abs(y) / E_C) ** tau_2
+        elif method == 'arithmetic':
+            return 0.5 * ((np.abs(x) / E) ** tau_1 + (np.abs(y) / E_C) ** tau_2)
+        else:
+            raise ValueError("Method must be 'geometric' or 'arithmetic'.")
+    
+    # Example usage:
+    x = 0.5  # Example input value for x
+    y = 0.3  # Example input value for y
+    E = 1.0  # Boundary E for x
+    E_C = 1.0  # Boundary E_C for y
+    tau_1 = 0.5  # Example tau_1
+    tau_2 = -0.5  # Example tau_2
+    
+    # Calculate alpha and beta using both methods
+    alpha = calculate_alpha(x, E, tau_1)
+    beta_geometric = calculate_beta(x, y, E, E_C, tau_1, tau_2, method='geometric')
+    beta_arithmetic = calculate_beta(x, y, E, E_C, tau_1, tau_2, method='arithmetic')
+    
+    (alpha, beta_geometric, beta_arithmetic)
