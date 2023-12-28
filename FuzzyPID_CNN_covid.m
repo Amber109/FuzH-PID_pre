@@ -408,3 +408,32 @@ close all;
 
 end
 
+function [alpha, beta_geometric, beta_arithmetic] = calculate_factors(x, y, E, E_C, tau_1, tau_2)
+    % Calculate the contraction-expansion factor alpha for an input value x,
+    % boundary E, and hereditary coefficient tau_1.
+    alpha = abs(x) / E ^ tau_1;
+
+    % Calculate the contraction-expansion factor beta for input values x, y,
+    % boundaries E, E_C, and hereditary coefficients tau_1, tau_2 using
+    % the geometric method.
+    beta_geometric = (abs(x) / E) ^ tau_1 * (abs(y) / E_C) ^ tau_2;
+
+    % Calculate the contraction-expansion factor beta using the arithmetic method.
+    beta_arithmetic = 0.5 * ((abs(x) / E) ^ tau_1 + (abs(y) / E_C) ^ tau_2);
+end
+
+% Example usage:
+x = 0.5;  % Example input value for x
+y = 0.3;  % Example input value for y
+E = 1.0;  % Boundary E for x
+E_C = 1.0;  % Boundary E_C for y
+tau_1 = 0.5;  % Example tau_1
+tau_2 = -0.5;  % Example tau_2
+
+% Calculate alpha and beta using both methods
+[alpha, beta_geometric, beta_arithmetic] = calculate_factors(x, y, E, E_C, tau_1, tau_2);
+
+% Display the results
+disp(['alpha: ', num2str(alpha)]);
+disp(['beta_geometric: ', num2str(beta_geometric)]);
+disp(['beta_arithmetic: ', num2str(beta_arithmetic)]);
