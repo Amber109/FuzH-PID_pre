@@ -64,7 +64,7 @@ Both versions of the model are meticulously documented and come with example dat
 ## Citation
 If you find this project useful for your research, please consider citing: 
 ```bibtex   
-@article{yao2021csgbbnet,
+@article{,
   title={FuzH-PID: Highly controllable and stable DNN for COVID-19 detection via improved Stochastic Optimization},
   author={Xujing Yao, Cheng Kang, Xin Zhang, Shuihua Wang, Yudong Zhang},
   journal={},
