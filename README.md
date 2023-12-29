@@ -45,14 +45,13 @@ To set up the programming environment for this project, follow these steps:
 
 ## Usage
 
-In this repository, you will find two versions of a deep learning model dedicated to the automatic diagnosis of Coronavirus Disease (COVID-19) using chest CT images. These models are designed to support healthcare professionals and researchers by providing robust diagnostic tools in the fight against this global health challenge.
+In this repository, you will find two versions of the FuzH-PID model dedicated to the automatic diagnosis of Coronavirus Disease (COVID-19) using chest CT images. These models are designed to support healthcare professionals and researchers by providing robust diagnostic tools in the fight against this global health challenge.
 
-### **FuzH-PID**:Python Version
+### Python Version
 
-   - FuzH-PID.py: For Python enthusiasts, we offer a Python implementation of the model, which is perfect for those who are accustomed to Python's ecosystem for deep learning applications. This python file runs the FuzH-PID_CNN model, which combines fuzzy logic and neural networks for COVID-19 diagnosis based on chest CT images. It encapsulates the core functionality of the FuzH-PID model with potential hereditary and serves as a key component for diagnostic tasks. To run it, load your pre-trained model, provide the image path, and specify the class index.
-Comprehensive documentation is available in the Python directory's `README.md`, detailing the setup process, usage instructions, and ways to tailor the model to your specific needs.###
+   - FuzH-PID.py: For Python enthusiasts, we offer a Python implementation of the model, which is perfect for those who are accustomed to Python's ecosystem for deep learning applications. This python file runs the FuzH-PID model, which combines fuzzy logic and neural networks for COVID-19 diagnosis based on chest CT images. It encapsulates the core functionality of the FuzH-PID model with potential hereditary and serves as a key component for diagnostic tasks. To run it, load your pre-trained model, provide the image path, and specify the class index. Comprehensive documentation is available in the Python directory's `README.md`, detailing the setup process, usage instructions, and ways to tailor the model to your specific needs.###
 
-### **FuzH-PID**:Matlab Version
+### Matlab Version
 
   - FuzH-PID_CNN_covid.m: The Matlab version of our model is tailored for users who prefer a Matlab environment for their medical image processing and deep learning tasks. This MATLAB file defines the neural network structure and main functions. To use it, specify the training and testing data paths, the number of epochs, and the learning rate. This MATLAB file runs the FuzH-PID_CNN model, which combines fuzzy logic and neural networks for COVID-19 diagnosis based on chest CT images. It encapsulates the core functionality of the FuzH-PID model with potential hereditary and serves as a key component for diagnostic tasks.
    - PID_DRAW.m: The "PID_DRAW.m" MATLAB file is responsible for generating curves of training loss and validation loss. These curves help visualize the control actions and decision-making processes of the FuzH-PID model, offering insights into how the model makes diagnostic decisions.
@@ -60,25 +59,7 @@ Comprehensive documentation is available in the Python directory's `README.md`, 
    - trainNetworkFuzzy.m: This MATLAB script, "trainNetworkFuzzy.m," can serve as a valuable tool for neural network training tasks, not only on COVID-19 diagnosis but also on image data such as the MNIST dataset.
 The model's functions and dependencies are all contained within this directory. For a detailed explanation of each function and how to customize the model to your dataset, refer to the `README.md` within the Matlab directory.
 
-
 Both versions of the model are meticulously documented and come with example datasets for testing purposes. We encourage you to explore both and choose the one that best fits your computational environment and personal preference.
-## Usage
-In this repository, you will find two distinct deep learning models tailored for the automatic diagnosis of Coronavirus Disease (COVID-19) based on chest CT images. Each model offers a unique approach to this critical task, empowering healthcare professionals and researchers with powerful diagnostic tools.
-
-1. **GBBNet (Model1)**:
-   - COVIDEXTRACT_Fea_v5.m: This MATLAB file is used for feature extraction. To run it, provide the input image folder and output feature folder as arguments.
-   - COVID_Main.m: COVID_Main.m: This MATLAB file defines the neural network structure and main functions. To use it, specify the training and testing data paths, the number of epochs, and the learning rate.
-   - Gradcam.m: This MATLAB file is for generating Grad-CAM maps. To run it, load your pre-trained model, provide the image path, and specify the class index.
-     
-2. **AdaD-FNN (Model2)**:
-   - U2MNet-sample.ipynb: This Jupyter Notebook file is designed for running the U2-net model to perform segmentation of CT images. 
-   - adadfnn-sample.ipynb: This Jupyter Notebook file is used to run the AdaD-FNN ensemble learning model for classification. 
-2. **FuzH-PID**:
-   - FuzH-PID.py: This python file runs the FuzH-PID_CNN model, which combines fuzzy logic and neural networks for COVID-19 diagnosis based on chest CT images. It encapsulates the core functionality of the FuzH-PID model with potential hereditary and serves as a key component for diagnostic tasks. To run it, load your pre-trained model, provide the image path, and specify the class index.
-   - FuzH-PID_CNN_covid.m: This MATLAB file defines the neural network structure and main functions. To use it, specify the training and testing data paths, the number of epochs, and the learning rate. This MATLAB file runs the FuzH-PID_CNN model, which combines fuzzy logic and neural networks for COVID-19 diagnosis based on chest CT images. It encapsulates the core functionality of the FuzH-PID model with potential hereditary and serves as a key component for diagnostic tasks.
-   - PID_DRAW.m: The "PID_DRAW.m" MATLAB file is responsible for generating curves of training loss and validation loss. These curves help visualize the control actions and decision-making processes of the FuzH-PID model, offering insights into how the model makes diagnostic decisions.
-   - Trainer.m: "Trainer.m" is a MATLAB script designed for setting up the training process of the FuzH-PID model. It provides the configuration and initialization for training, allowing you to customize training parameters according to your specific needs.
-   - trainNetworkFuzzy.m: This MATLAB script, "trainNetworkFuzzy.m," can serve as a valuable tool for neural network training tasks, not only on COVID-19 diagnosis but also on image data such as the MNIST dataset.
 
 ## Citation
 If you find this project useful for your research, please consider citing: 
