@@ -32,7 +32,7 @@ To set up the programming environment for this project, follow these steps:
 ### Installation
 
 1. **MATLAB Setup**:
-   - Download and install MATLAB version 2019.A from the official MathWorks website.
+   - Download and install MATLAB version 2019.B from the official MathWorks website.
    - Ensure that you have the required MATLAB toolboxes.
 
 2. **Python Setup**:
